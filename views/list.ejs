@@ -1,0 +1,39 @@
+<%- include("header") -%>
+
+    <body>
+        <div class="box" id="heading">
+            <h1>
+                <%= today %>
+            </h1>
+        </div>
+        <div class="box">
+            <% for(var i=0;i<items.length;i++) { %>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <p>
+                        <%= items[i] %>
+                    </p>
+
+                </div>
+                <% } %>
+                    <form action="/" method="post">
+                        <input type="text" name="addItems" id="todo" placeholder="Enter items" autocomplete="off">
+                        <button type="submit">+</button>
+                    </form>
+        </div>
+        <%- include("footer") -%>
+
+
+            <!-- <p>IT's a weekday, lesss gooo</p>
+    <h2>DEEZ NUTS</h2>
+    <br><br>
+     making code where the html page reacts differently to different colors, i.e one for weekend and one for weekday
+    <% if(today==="Saturday" || today==="Sunday" ){ %>
+        <h3 class="weekend">IT's a <%= today %>
+        </h3>
+        <% } else{ %>
+
+            <h3 class="weekday">IT's a <%= today %>
+            </h3>
+            <% }%> -->
